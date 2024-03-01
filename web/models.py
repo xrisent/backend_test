@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models import UniqueConstraint
 
 class Post(models.Model):
     photo = models.ImageField()
@@ -37,4 +38,3 @@ class Like(models.Model):
     class Meta:
         verbose_name = 'Like'
         verbose_name_plural = 'Likes'
-        constraints = [UniqueConstraint(fields=['post', 'user'], name='unique_post_user')]

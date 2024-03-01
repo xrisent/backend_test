@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from .models import *
 
 class PostSerializer(serializers.ModelSerializer):
-    photo = serializer.ImageField(required=True)
+    photo = serializers.ImageField(required=True)
     
     class Meta:
         model = Post
