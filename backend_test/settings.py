@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework',               # Django Rest Framework for building APIs
     'rest_framework.authtoken',     # Token-based authentication for DRF
-    'corsheaders',                  # Django CORS headers for handling Cross-Origin Resource Sharing
+    'corsheaders',  # Django CORS headers for handling Cross-Origin Resource Sharing
+    'django_filters',
     
     # APps
     'web',

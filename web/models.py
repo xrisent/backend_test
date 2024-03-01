@@ -9,7 +9,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.author
+        return self.description
 
     class Meta:
         verbose_name = 'Post'
@@ -19,10 +19,10 @@ class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
-        return self.author
+        return self.text
 
     class Meta:
         verbose_name = 'Comment'
@@ -30,10 +30,10 @@ class Comment(models.Model):
 
 class Like(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
-        return self.author
+        return f'q'
 
     class Meta:
         verbose_name = 'Like'
