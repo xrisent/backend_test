@@ -21,3 +21,13 @@ class LikeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Like
         fields = '__all__'
+
+class UserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+    username = serializers.CharField()
+
+
+    class Meta:
+        model = User
+        fields = ['username', 'password']
+    

@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework',               # Django Rest Framework for building APIs
     'rest_framework.authtoken',     # Token-based authentication for DRF
-    'corsheaders',  # Django CORS headers for handling Cross-Origin Resource Sharing
-    'django_filters',
+    'corsheaders',                  # Django CORS headers for handling Cross-Origin Resource Sharing
+    'django_filters',               # Filters
     
     # APps
     'web',

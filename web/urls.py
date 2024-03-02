@@ -17,6 +17,7 @@ router.register(r'like', views.LikeViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('user/', views.UserCreateAPIView.as_view(), name='user-create'),
 
     # JWT tokens
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
